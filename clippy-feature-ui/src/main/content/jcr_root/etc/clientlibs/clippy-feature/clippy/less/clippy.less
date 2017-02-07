@@ -1,0 +1,110 @@
+.aem-assistant-clippy {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+
+  z-index: 10000;
+
+  &[data-personality="default"] {
+
+    background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Blinking.gif);
+
+    &[data-talking="true"] {
+
+      background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Talking.gif);
+
+      &[data-mood="laughing"] {
+
+        background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Laughing.gif);
+
+      }
+
+    }
+
+  }
+
+  &[data-personality="lazy"] {
+    background-image: url(/etc/clientlibs/clippy-feature/clippy/img/LazyDog-Sleeping.gif);
+
+    &[data-talking="true"] {
+      &[data-mood="awake"] {
+        background-image: url(/etc/clientlibs/clippy-feature/clippy/img/LazyDog-Blinking.gif);
+      }
+    }
+  }
+
+  &[data-personality="goth"] {
+    background-image: url(/etc/clientlibs/clippy-feature/clippy/img/Goth-Standing.gif);
+
+    &[data-talking="true"] {
+      background-image: url(/etc/clientlibs/clippy-feature/clippy/img/Goth-Talking.gif);
+    }
+  }
+
+  &[data-personality="evil"] {
+    background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Blinking.gif);
+
+    &[data-talking="true"] {
+
+      background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Talking.gif);
+
+      &[data-mood="laughing"] {
+
+        background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Laughing.gif);
+
+      }
+
+      &[data-mood="angry"] {
+
+        background-image: url(/etc/clientlibs/clippy-feature/clippy/img/AEMLogo-Angry.gif);
+
+      }
+
+    }
+  }
+
+}
+
+.aem-assistant-clippy-speech-bubble {
+  width: 15rem;
+  background-color: #fff;
+
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  z-index: 10001;
+
+  padding: 2rem 1rem;
+
+  border-radius: 1rem;
+
+  font-size: 1rem;
+
+  display: none;
+
+  .speech-content {
+    .options-set {
+      margin-top: 5px;
+    }
+  }
+
+  .speech-bubble-arrow {
+    position: absolute;
+
+    bottom: -12px;
+    right: 35px;
+    width: 25px;
+    height: 25px;
+
+    background-color: #fff;
+
+    transform: rotateZ(45deg);
+  }
+}

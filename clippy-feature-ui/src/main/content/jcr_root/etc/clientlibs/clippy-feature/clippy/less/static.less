@@ -1,0 +1,17 @@
+.static {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url( '/etc/designs/clippy-feature/static.gif' );
+  z-index: 10005;
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 2s;
+
+  &.evil {
+    background-image: url( '/etc/designs/clippy-feature/naked-chicken.jpg' );
+    background-size: cover;
+  }
+}

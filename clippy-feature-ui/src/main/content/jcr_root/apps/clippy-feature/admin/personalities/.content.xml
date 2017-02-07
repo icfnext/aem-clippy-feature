@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:mixinTypes="[sling:VanityPath]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="AEM Assistant Personalities"
+            sling:resourceType="granite/ui/components/foundation/page"
+            sling:vanityOrder="{Long}301"
+            sling:vanityPath="">
+
+        <head jcr:primaryType="nt:unstructured">
+            <viewport
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/admin/page/viewport"/>
+            <meta
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/meta"
+                    content="chrome=1"
+                    name="X-UA-Compatible"/>
+            <winmode
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/page/winmode"/>
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/page/title"/>
+            <favicon
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/page/favicon"/>
+            <clientlibs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/includeclientlibs"
+                    categories="[coralui2,granite.ui.foundation,granite.ui.foundation.admin,cq.common.wcm,cq.siteadmin.admin,cq.listview.columns.personalization,cq.listview.analytics,cq.siteadmin.admin.pagecard,clippy.admin.personalities]"/>
+        </head>
+        <body
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/page/body">
+            <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/layouts/page"/>
+            <rail
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/navcolumns"
+                    currentId="aem-assistant-personalities"
+                    srcPath="cq/core/content/nav"/>
+            <breadcrumbs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="harbor/admin/documentation/breadcrumb"
+                    href="/apps/clippy-feature/admin.html"
+                    title="AEM Assistant"/>
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/endor/title"
+                    contentPath="/apps/clippy-feature/admin/about"
+                    rootTitle="AEM Assistant Personalities"/>
+            <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="/libs/granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column-1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/foundation/layouts/form"
+                                mode="edit"
+                                style="vertical"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                    class="coral-Heading coral-Heading--1"
+                                    level="2"
+                                    text="AEM Assistant Personalities"/>
+                            <description
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/text"
+                                    text="Select the personality for the AEM Assistant most conducive to your authoring style and needs."/>
+                            <personalities-selection-form
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/libs/granite/ui/components/foundation/form"
+                                    method="post"
+                                    action="/var/aem-assistant/personality"
+                                    dataPath="/var/aem-assistant/personality">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <personality-options
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/foundation/form/radiogroup"
+                                            name="personality">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default-option
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                    value="{Long}0"
+                                                    text="Default" />
+                                            <lazy-option
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                    value="{Long}1"
+                                                    text="Lazy" />
+                                            <goth-option
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                    value="{Long}2"
+                                                    text="Goth" />
+                                            <happy-option
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                    value="{Long}3"
+                                                    text="Happy" />
+                                        </items>
+                                    </personality-options>
+                                    <submit-button
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/foundation/button"
+                                            type="submit"
+                                            text="Submit"/>
+                                </items>
+                            </personalities-selection-form>
+                        </items>
+                    </column-1>
+                </items>
+            </content>
+        </body>
+    </jcr:content>
+</jcr:root>

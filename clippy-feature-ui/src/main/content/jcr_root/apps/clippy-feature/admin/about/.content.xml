@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:mixinTypes="[sling:VanityPath]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="About the AEM Assistant"
+            sling:resourceType="granite/ui/components/foundation/page"
+            sling:vanityOrder="{Long}301"
+            sling:vanityPath="">
+
+        <head jcr:primaryType="nt:unstructured">
+            <viewport
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/admin/page/viewport"/>
+            <meta
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/meta"
+                    content="chrome=1"
+                    name="X-UA-Compatible"/>
+            <winmode
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/page/winmode"/>
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/page/title"/>
+            <favicon
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/page/favicon"/>
+            <clientlibs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/includeclientlibs"
+                    categories="[coralui2,granite.ui.foundation,granite.ui.foundation.admin,cq.common.wcm,cq.siteadmin.admin,cq.listview.columns.personalization,cq.listview.analytics,cq.siteadmin.admin.pagecard]"/>
+        </head>
+        <body
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/page/body">
+            <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/layouts/page"/>
+            <rail
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/endor/navcolumns"
+                    currentId="aem-assistant-about"
+                    srcPath="cq/core/content/nav"/>
+            <breadcrumbs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="harbor/admin/documentation/breadcrumb"
+                    href="/apps/clippy-feature/admin.html"
+                    title="AEM Assistant"/>
+            <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cq/gui/components/siteadmin/admin/endor/title"
+                    contentPath="/apps/clippy-feature/admin/about"
+                    rootTitle="About the AEM Assistant"/>
+            <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                        type="large"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tab1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            jcr:title="Overview">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                    class="coral-Heading coral-Heading--1"
+                                    level="2"
+                                    text="About the AEM Assistant"/>
+                            <description-1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec varius mauris, at placerat augue. In non molestie sem. Sed venenatis sapien sit amet dolor elementum fringilla. Praesent rhoncus sapien at sapien laoreet iaculis. Fusce blandit arcu nunc, at dapibus massa dapibus at. Donec molestie nunc dolor, at fringilla lorem euismod nec. Praesent finibus mauris non rutrum semper. Praesent in aliquam massa. Integer sagittis leo rhoncus leo commodo, sodales malesuada purus pretium. Phasellus lacus metus, dignissim at orci ac, commodo dictum sapien. Vivamus accumsan ex neque, in dignissim sapien accumsan ut. Donec sed nisl nec lorem feugiat pretium."/>
+                            <description-2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Aliquam porttitor luctus tincidunt. Duis condimentum nec lacus ut lacinia. Aenean imperdiet ante non pretium lobortis. Cras non nulla volutpat, sodales orci sit amet, mollis libero. Ut tincidunt at augue ac facilisis. Donec consequat nibh id metus mattis vehicula. Nam vitae leo velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Vestibulum aliquam, est quis volutpat auctor, tellus arcu ultricies purus, ac tincidunt lorem eros nec eros. Etiam pretium tellus in lorem faucibus, eu ornare erat ornare."/>
+                            <description-3
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Donec ac consequat magna. Fusce id laoreet arcu. Vivamus eu pulvinar nibh. Praesent sit amet suscipit velit. Vivamus venenatis sem nibh. Duis sit amet erat blandit, luctus risus a, facilisis ante. Integer et suscipit lorem. In id massa non metus volutpat viverra eu vel turpis. Praesent sit amet lorem quis metus sodales lobortis. Suspendisse non nulla sagittis, pellentesque erat et, mollis nunc. Sed ac risus eleifend risus interdum luctus eget id enim. Aenean vel eros quis ipsum aliquam bibendum a eget enim."/>
+                            <description-4
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Vivamus malesuada tellus vitae dolor tincidunt semper. Pellentesque in pharetra sapien, non tincidunt magna. Pellentesque nec mi sed ipsum pretium tempor ac vel massa. Pellentesque luctus enim a massa lacinia maximus. Aenean eleifend luctus leo, auctor dignissim mi dignissim ac. Fusce non est sodales, ultricies mi id, volutpat erat. Vestibulum commodo, dolor non finibus scelerisque, felis ligula rhoncus libero, ac condimentum leo felis id odio. Suspendisse hendrerit enim dui, id lobortis augue commodo posuere. Vivamus placerat, risus eu hendrerit pharetra, ex lectus imperdiet sapien, quis rhoncus ligula tortor at urna. Suspendisse in tempor dui."/>
+                            <description-5
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Suspendisse at justo quis metus molestie consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt, nisi ac laoreet imperdiet, eros urna porttitor velit, sit amet scelerisque turpis lacus id diam. Phasellus gravida metus eu ante fermentum aliquet in varius urna. Praesent lobortis purus eu rutrum suscipit. Nullam quis luctus turpis, eget vestibulum leo. Suspendisse ut risus sit amet magna tincidunt varius. Curabitur diam sapien, ultrices a nulla ut, posuere ultricies eros. Suspendisse porta velit in turpis placerat blandit. Nulla rutrum volutpat sem. Curabitur pretium id nulla sed feugiat. Morbi dolor nunc, pellentesque in mauris eget, pharetra aliquam purus. Sed imperdiet libero id velit lobortis, et egestas mauris varius."/>
+                        </items>
+                    </tab1>
+                    <tab2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container"
+                            jcr:title="Advanced Usage">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/heading"
+                                    class="coral-Heading coral-Heading--1"
+                                    level="2"
+                                    text="Advanced Usage of the AEM Assistant"/>
+                            <description-1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec varius mauris, at placerat augue. In non molestie sem. Sed venenatis sapien sit amet dolor elementum fringilla. Praesent rhoncus sapien at sapien laoreet iaculis. Fusce blandit arcu nunc, at dapibus massa dapibus at. Donec molestie nunc dolor, at fringilla lorem euismod nec. Praesent finibus mauris non rutrum semper. Praesent in aliquam massa. Integer sagittis leo rhoncus leo commodo, sodales malesuada purus pretium. Phasellus lacus metus, dignissim at orci ac, commodo dictum sapien. Vivamus accumsan ex neque, in dignissim sapien accumsan ut. Donec sed nisl nec lorem feugiat pretium."/>
+                            <description-2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Aliquam porttitor luctus tincidunt. Duis condimentum nec lacus ut lacinia. Aenean imperdiet ante non pretium lobortis. Cras non nulla volutpat, sodales orci sit amet, mollis libero. Ut tincidunt at augue ac facilisis. Donec consequat nibh id metus mattis vehicula. Nam vitae leo velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Vestibulum aliquam, est quis volutpat auctor, tellus arcu ultricies purus, ac tincidunt lorem eros nec eros. Etiam pretium tellus in lorem faucibus, eu ornare erat ornare."/>
+                            <description-3
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Donec ac consequat magna. Fusce id laoreet arcu. Vivamus eu pulvinar nibh. Praesent sit amet suscipit velit. Vivamus venenatis sem nibh. Duis sit amet erat blandit, luctus risus a, facilisis ante. Integer et suscipit lorem. In id massa non metus volutpat viverra eu vel turpis. Praesent sit amet lorem quis metus sodales lobortis. Suspendisse non nulla sagittis, pellentesque erat et, mollis nunc. Sed ac risus eleifend risus interdum luctus eget id enim. Aenean vel eros quis ipsum aliquam bibendum a eget enim."/>
+                            <description-4
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Vivamus malesuada tellus vitae dolor tincidunt semper. Pellentesque in pharetra sapien, non tincidunt magna. Pellentesque nec mi sed ipsum pretium tempor ac vel massa. Pellentesque luctus enim a massa lacinia maximus. Aenean eleifend luctus leo, auctor dignissim mi dignissim ac. Fusce non est sodales, ultricies mi id, volutpat erat. Vestibulum commodo, dolor non finibus scelerisque, felis ligula rhoncus libero, ac condimentum leo felis id odio. Suspendisse hendrerit enim dui, id lobortis augue commodo posuere. Vivamus placerat, risus eu hendrerit pharetra, ex lectus imperdiet sapien, quis rhoncus ligula tortor at urna. Suspendisse in tempor dui."/>
+                            <description-5
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="screens/ui/components/admin/text"
+                                    line1="Suspendisse at justo quis metus molestie consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt, nisi ac laoreet imperdiet, eros urna porttitor velit, sit amet scelerisque turpis lacus id diam. Phasellus gravida metus eu ante fermentum aliquet in varius urna. Praesent lobortis purus eu rutrum suscipit. Nullam quis luctus turpis, eget vestibulum leo. Suspendisse ut risus sit amet magna tincidunt varius. Curabitur diam sapien, ultrices a nulla ut, posuere ultricies eros. Suspendisse porta velit in turpis placerat blandit. Nulla rutrum volutpat sem. Curabitur pretium id nulla sed feugiat. Morbi dolor nunc, pellentesque in mauris eget, pharetra aliquam purus. Sed imperdiet libero id velit lobortis, et egestas mauris varius."/>
+                        </items>
+                    </tab2>
+
+                </items>
+            </content>
+        </body>
+    </jcr:content>
+</jcr:root>

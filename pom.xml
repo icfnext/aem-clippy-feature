@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>com.icfolson.aem.library</groupId>
+        <artifactId>aem-library</artifactId>
+        <version>6.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.patandpaul.aem.features.clippy</groupId>
+    <artifactId>clippy-feature</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Clippy Feature AEM Website</name>
+
+    <modules>
+        <module>clippy-feature-core</module>
+        <module>clippy-feature-ui</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>citytech-public</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>citytech-private</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/CITYTECH-Private/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>citytech-public</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/public</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>citytech-private</id>
+            <url>http://nexus.citytech.ctmsp.com/content/groups/CITYTECH-Private/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <core.artifactId>clippy-feature-core</core.artifactId>
+
+        <!-- versions -->
+        <aemlibrary.version>6.0.0</aemlibrary.version>
+        <component.plugin.version>4.0.0</component.plugin.version>
+
+        <!-- defaults -->
+        <package.skip>true</package.skip>
+        <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
+        <aem.username>admin</aem.username>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <property>
+                    <name>local</name>
+                </property>
+            </activation>
+            <properties>
+                <package.skip>false</package.skip>
+                <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
+                <aem.host.author>localhost</aem.host.author>
+                <aem.host.publish>localhost</aem.host.publish>
+                <aem.port.author>4502</aem.port.author>
+                <aem.port.publish>4503</aem.port.publish>
+                <aem.username.author>admin</aem.username.author>
+                <aem.username.publish>admin</aem.username.publish>
+                <aem.password.author>admin</aem.password.author>
+                <aem.password.publish>admin</aem.password.publish>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>1.3.1</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-core</artifactId>
+                <version>${aemlibrary.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-api</artifactId>
+                <version>${aemlibrary.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-models</artifactId>
+                <version>${aemlibrary.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.icfolson.aem.library</groupId>
+                <artifactId>aem-library-ui</artifactId>
+                <version>${aemlibrary.version}</version>
+                <type>zip</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

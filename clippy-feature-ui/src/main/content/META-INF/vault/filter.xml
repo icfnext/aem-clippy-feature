@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/clippy-feature" />
+    <filter root="/etc/clientlibs/clippy-feature" />
+    <filter root="/etc/designs/clippy-feature">
+        <exclude pattern="/etc/designs/clippy-feature/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/apps/cq/core/content/nav/aem-assistant" />
+    <filter root="/etc/packages/aem-library/aem-library-ui-${aemlibrary.version}.zip"/>
+</workspaceFilter>
